@@ -40,5 +40,8 @@ Counter IV for AES encryption, also helps keep streams in sync.
 ### Tag
 Sha1 HMAC of each packet. Diffie Hellman exchanges are HMACed with the pre shared key between clients to protect against man in the middle attacks.
 
+## Example
+Included in the examples folder is a handler and an agent. The agent connects to the handler, initiates the DH key exchange, and upon successful negotiation sends the README.md file to the handler. You obviously need two XBee modules for this to work. Ensure the PSK for the client contexts match otherwise the DH exchange will fail.
+
 ## Disclaimer
 I am neither a full time developer, nor a cryptographer. If you see any issues with either of these, please submit a pull request. This is still very much experimental technology, and in pre-alpha stages as most of the protocol is still not implemented. Use at your own risk.
